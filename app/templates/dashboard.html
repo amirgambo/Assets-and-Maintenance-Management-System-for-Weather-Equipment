@@ -1,0 +1,9 @@
+{% for task in tasks %}
+    <div>
+        <p>{{ task.description }}</p>
+        <p>Priority: {{ task.priority }}</p>
+        <p>Technician: {{ task.technician }}</p>
+        <p>Completion Date: {{ task.completion_date }}</p>
+    </div>
+{% endfor %}
+
