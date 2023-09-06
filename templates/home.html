@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset and Maintenance manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <section>
+  <h1 class="text-center mt-2 mb-4">ASSETS AND MAINTENANCE MANAGEMENT SYSTEM</h1>
+  <img class="img-fluid mb-2 img-thumbnail" src="static/weather8.jpg" height = 320px width=100%>
+    </section>
+  <section class="row mt-2 mb-4">
+    <img class="img-fluid col-4 mb-4 img-thumbnail" src="static/weather1.jpg">
+  <div class="col-8">
+  <h4 class="text-center mt-2 mb-4">About AMMS</h4>
+  <h2 class="text-center mt-2 mb-4">Your Complete Weather Equipment Solution</h2>
+  <hr>
+  <p class="lead">At Assets and Maintenance Management System for Weather Equipment, we leverage advanced cloud-based technology to empower you with total control over your weather equipment. No matter where you are, you can effectively monitor, manage, and maintain your systems, leading to enhanced efficiency, lowered costs, and less downtime.</p>
+    <div class="row">
+      <div class="col-4">
+  <h3 class="text-center mt-2 mb-4">System Mastery</h3>
+  <p class="lead">Our platform provides you with all the tools you need to be in the absolute control of your weather systems, optimizing performance and extending their effective lifespan.</p>
+      </div>
+      <div class="col-4">
+  <h3 class="text-center mt-2 mb-4">Technical Support</h3>
+  <p class="lead">Backed by a team of experienced technical consultants, we provide seamless support to help you navigate any technical challenges, ensuring your systems operate at peak efficiency consistently.</p>
+      </div>
+    </div>
+    
+    <div class="text-center">
+  <button class="btn btn-primary btn-lg mb-2">Contact Us</button>
+    </div>
+    </div>
+    <hr>
+  </section>
+  <section>
+  <h3 class="text-center mt-2 mb-4">PLATFORM FEATURES</h3>
+  <h2 class="text-center mt-2 mb-4">Cutting-edge Features for Efficient Management</h2>
+  <h3 class="text-center mt-2 mb-4">Explore the comprehensive features of our platform designed to streamline management and improve the efficiency of your weather systems.</h3>
+  <hr>
+  </section>
+    <section>
+  <h3 class="text-center mt-2 mb-4">OUR WORK</h3>
+  <h2 class="text-center mt-2 mb-4">GENERAL EQUIPMENT</h2>
+  <hr>
+      <div class="row align-items-start">
+      <div class="col mb-2"><img class="img-fluid  img-thumbnail" src="static/weather2.jpg"></div>
+      <div class="col mb-2"><img class="img-fluid img-thumbnail" src="static/weather3.jpg"></div>
+      <div class="col mb-2"><img class="img-fluid img-thumbnail" src="static/weather4.jpg"></div>
+      </div>
+      <div class="row align-items-start">
+      <div class="col mb-2"><img class="img-fluid img-thumbnail" src="static/weather5.jpg"></div>
+      <div class="col mb-2"><img class="img-fluid img-thumbnail" src="static/weather6.jpg"></div>
+      <div class="col mb-2"><img class="img-fluid img-thumbnail" src="static/weather7.jpg"></div>
+      </div>
+            <div class="row align-items-start">
+      <div class="col mb-2"><img class="img-fluid img-thumbnail" src="static/weather9.jpg"></div>
+      <div class="col mb-2"><img class="img-fluid img-thumbnail" src="static/weather10.jpg"></div>
+      <div class="col mb-2"><img class="img-fluid img-thumbnail" src="static/weather11.jpg"></div>
+      </div>
+  <hr>
+    </section>
+    <section>
+  <h3 class="text-center mt-2 mb-4">CONTACT</h3>
+  <p class="lead">We are here to help. Reach out to us for any questions, concerns, or feedback.</p>
+      {% for job in jobs %}
+      <div>
+      <h4>{{job['title']}}</h4>
+      <div><b>Location: </b>{{job['Location']}}</div>
+      </div>
+      {% endfor %}
+{% for task in tasks %}
+    <div>
+        <p>{{ task.description }}</p>
+        <p>Priority: {{ task.priority }}</p>
+        <p>Technician: {{ task.technician }}</p>
+        <p>Completion Date: {{ task.completion_date }}</p>
+    </div>
+{% endfor %}
+    </section>
+</div>
+</body>
+</html>
+
+
